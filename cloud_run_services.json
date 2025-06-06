@@ -1,0 +1,113 @@
+[
+  {
+    "apiVersion": "serving.knative.dev/v1",
+    "kind": "Service",
+    "metadata": {
+      "annotations": {
+        "run.googleapis.com/client-name": "gcloud",
+        "run.googleapis.com/client-version": "525.0.0",
+        "run.googleapis.com/ingress": "all",
+        "run.googleapis.com/ingress-status": "all",
+        "run.googleapis.com/operation-id": "e681b6f4-1c61-4d68-8822-cf9afad4bd46",
+        "run.googleapis.com/urls": "[\"https://gpt-webhook-9823603831.europe-west1.run.app\",\"https://gpt-webhook-pld3nmd73a-ew.a.run.app\"]",
+        "serving.knative.dev/creator": "9823603831-compute@developer.gserviceaccount.com",
+        "serving.knative.dev/lastModifier": "9823603831-compute@developer.gserviceaccount.com"
+      },
+      "creationTimestamp": "2025-06-05T17:33:30.099528Z",
+      "generation": 11,
+      "labels": {
+        "cloud.googleapis.com/location": "europe-west1"
+      },
+      "name": "gpt-webhook",
+      "namespace": "9823603831",
+      "resourceVersion": "AAY25aZQIYo",
+      "selfLink": "/apis/serving.knative.dev/v1/namespaces/9823603831/services/gpt-webhook",
+      "uid": "8dc84d5a-6204-4877-aba8-85b7239d5439"
+    },
+    "spec": {
+      "template": {
+        "metadata": {
+          "annotations": {
+            "autoscaling.knative.dev/maxScale": "40",
+            "run.googleapis.com/client-name": "gcloud",
+            "run.googleapis.com/client-version": "525.0.0",
+            "run.googleapis.com/startup-cpu-boost": "true"
+          },
+          "labels": {
+            "client.knative.dev/nonce": "dlpfrqbdxq",
+            "run.googleapis.com/startupProbeType": "Default"
+          }
+        },
+        "spec": {
+          "containerConcurrency": 80,
+          "containers": [
+            {
+              "image": "gcr.io/gpt-candidate-sheets/gpt-webhook",
+              "ports": [
+                {
+                  "containerPort": 8080,
+                  "name": "http1"
+                }
+              ],
+              "resources": {
+                "limits": {
+                  "cpu": "1000m",
+                  "memory": "512Mi"
+                }
+              },
+              "startupProbe": {
+                "failureThreshold": 1,
+                "periodSeconds": 240,
+                "tcpSocket": {
+                  "port": 8080
+                },
+                "timeoutSeconds": 240
+              }
+            }
+          ],
+          "serviceAccountName": "9823603831-compute@developer.gserviceaccount.com",
+          "timeoutSeconds": 300
+        }
+      },
+      "traffic": [
+        {
+          "latestRevision": true,
+          "percent": 100
+        }
+      ]
+    },
+    "status": {
+      "address": {
+        "url": "https://gpt-webhook-pld3nmd73a-ew.a.run.app"
+      },
+      "conditions": [
+        {
+          "lastTransitionTime": "2025-06-06T11:37:05.943946Z",
+          "status": "True",
+          "type": "Ready"
+        },
+        {
+          "lastTransitionTime": "2025-06-06T11:37:04.744938Z",
+          "status": "True",
+          "type": "ConfigurationsReady"
+        },
+        {
+          "lastTransitionTime": "2025-06-06T11:37:05.913874Z",
+          "status": "True",
+          "type": "RoutesReady"
+        }
+      ],
+      "latestCreatedRevisionName": "gpt-webhook-00011-bqr",
+      "latestReadyRevisionName": "gpt-webhook-00011-bqr",
+      "observedGeneration": 11,
+      "traffic": [
+        {
+          "latestRevision": true,
+          "percent": 100,
+          "revisionName": "gpt-webhook-00011-bqr"
+        }
+      ],
+      "url": "https://gpt-webhook-pld3nmd73a-ew.a.run.app"
+    }
+  }
+]

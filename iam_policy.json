@@ -1,0 +1,118 @@
+{
+  "bindings": [
+    {
+      "members": [
+        "serviceAccount:gptdb-service-account-json@gpt-candidate-sheets.iam.gserviceaccount.com"
+      ],
+      "role": "roles/artifactregistry.reader"
+    },
+    {
+      "members": [
+        "serviceAccount:service-9823603831@gcp-sa-artifactregistry.iam.gserviceaccount.com"
+      ],
+      "role": "roles/artifactregistry.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:9823603831@cloudbuild.gserviceaccount.com"
+      ],
+      "role": "roles/cloudbuild.builds.builder"
+    },
+    {
+      "members": [
+        "serviceAccount:gpt-agent-cloud@gpt-candidate-sheets.iam.gserviceaccount.com",
+        "serviceAccount:gptdb-service-account-json@gpt-candidate-sheets.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudbuild.builds.editor"
+    },
+    {
+      "members": [
+        "serviceAccount:service-9823603831@gcp-sa-cloudbuild.iam.gserviceaccount.com"
+      ],
+      "role": "roles/cloudbuild.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-9823603831@compute-system.iam.gserviceaccount.com"
+      ],
+      "role": "roles/compute.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:service-9823603831@containerregistry.iam.gserviceaccount.com"
+      ],
+      "role": "roles/containerregistry.ServiceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:9823603831-compute@developer.gserviceaccount.com",
+        "serviceAccount:9823603831@cloudservices.gserviceaccount.com",
+        "serviceAccount:gptdb-service-account-json@gpt-candidate-sheets.iam.gserviceaccount.com"
+      ],
+      "role": "roles/editor"
+    },
+    {
+      "members": [
+        "serviceAccount:gptdb-service-account-json@gpt-candidate-sheets.iam.gserviceaccount.com"
+      ],
+      "role": "roles/iam.serviceAccountTokenCreator"
+    },
+    {
+      "members": [
+        "serviceAccount:gpt-agent-cloud@gpt-candidate-sheets.iam.gserviceaccount.com",
+        "serviceAccount:gptdb-service-account-json@gpt-candidate-sheets.iam.gserviceaccount.com"
+      ],
+      "role": "roles/iam.serviceAccountUser"
+    },
+    {
+      "members": [
+        "serviceAccount:9823603831-compute@developer.gserviceaccount.com",
+        "serviceAccount:gpt-candidate-agent-5@gpt-candidate-sheets.iam.gserviceaccount.com",
+        "serviceAccount:gpt-candidate-updater@candidatedb-gpt.iam.gserviceaccount.com",
+        "serviceAccount:gptdb-service-account-json@gpt-candidate-sheets.iam.gserviceaccount.com",
+        "user:liat.tishman85@gmail.com"
+      ],
+      "role": "roles/owner"
+    },
+    {
+      "members": [
+        "serviceAccount:service-9823603831@gcp-sa-pubsub.iam.gserviceaccount.com"
+      ],
+      "role": "roles/pubsub.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:9823603831@cloudbuild.gserviceaccount.com",
+        "serviceAccount:gpt-agent-cloud@gpt-candidate-sheets.iam.gserviceaccount.com",
+        "serviceAccount:gptdb-service-account-json@gpt-candidate-sheets.iam.gserviceaccount.com"
+      ],
+      "role": "roles/run.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:gptdb-service-account-json@gpt-candidate-sheets.iam.gserviceaccount.com"
+      ],
+      "role": "roles/run.invoker"
+    },
+    {
+      "members": [
+        "serviceAccount:service-9823603831@serverless-robot-prod.iam.gserviceaccount.com"
+      ],
+      "role": "roles/run.serviceAgent"
+    },
+    {
+      "members": [
+        "serviceAccount:gpt-agent-cloud@gpt-candidate-sheets.iam.gserviceaccount.com"
+      ],
+      "role": "roles/storage.admin"
+    },
+    {
+      "members": [
+        "serviceAccount:gpt-agent-cloud@gpt-candidate-sheets.iam.gserviceaccount.com"
+      ],
+      "role": "roles/viewer"
+    }
+  ],
+  "etag": "BwY26YJlLMI=",
+  "version": 1
+}
