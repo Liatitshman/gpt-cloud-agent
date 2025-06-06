@@ -1,8 +1,10 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/gpt-candidate-sheets/gpt-cloud-agent', '.']
+    args: ['build', '-t', 'gcr.io/gpt-candidate-sheets/gpt-cloud-agent:latest', '.']
+
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/gpt-candidate-sheets/gpt-cloud-agent']
+    args: ['push', 'gcr.io/gpt-candidate-sheets/gpt-cloud-agent:latest']
+
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
     args:
@@ -10,11 +12,15 @@ steps:
       - 'deploy'
       - 'gpt-cloud-agent'
       - '--image'
-      - 'gcr.io/gpt-candidate-sheets/gpt-cloud-agent'
+      - 'gcr.io/gpt-candidate-sheets/gpt-cloud-agent:latest'
       - '--region'
       - 'europe-west1'
       - '--platform'
       - 'managed'
       - '--allow-unauthenticated'
+
 images:
-  - 'gcr.io/gpt-candidate-sheets/gpt-cloud-agent'
+  - 'gcr.io/gpt-candidate-sheets/gpt-cloud-agent:latest'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
