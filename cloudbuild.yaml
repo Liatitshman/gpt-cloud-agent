@@ -21,5 +21,4 @@ images:
   - 'gcr.io/gpt-candidate-sheets/gpt-cloud-agent'
 
 options:
-  logging: CLOUD_LOGGING_ONLY
-  default_logs_bucket_behavior: REGIONAL_USER_OWNED_BUCKET
+  defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
